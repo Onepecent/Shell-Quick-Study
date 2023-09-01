@@ -92,3 +92,38 @@ https://zhuanlan.zhihu.com/p/346026915?utm_id=0
 - FS和OFS是用于控制字段（列）的分隔和输出格式的变量。
 
 通过修改这些变量的值，可以自定义分隔符以适应不同的输入数据格式和输出需求。
+
+----
+
+要在一个Shell脚本中调用三个子Shell并等待它们完成后再执行第四个Shell，你可以使用`wait`命令来等待子Shell的结束。以下是一个示例Shell脚本：
+
+```bash
+#!/bin/bash
+
+# 启动第一个子Shell
+echo "启动第一个子Shell"
+./first_script.sh &
+
+# 启动第二个子Shell
+echo "启动第二个子Shell"
+./second_script.sh &
+
+# 启动第三个子Shell
+echo "启动第三个子Shell"
+./third_script.sh &
+
+# 等待第一个子Shell结束
+wait
+
+# 等待第二个子Shell结束
+wait
+
+# 等待第三个子Shell结束
+wait
+
+# 执行第四个Shell
+echo "执行第四个Shell"
+./fourth_script.sh
+```
+
+上面的脚本假设你有四个分别为`first_script.sh`、`second_script.sh`、`third_script.sh`和`fourth_script.sh`的Shell脚本文件。在脚本中，我们首先启动三个子Shell，然后使用`wait`命令等待它们的完成。最后，当所有三个子Shell都结束后，才执行第四个Shell。
