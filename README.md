@@ -132,3 +132,4 @@ echo "执行第四个Shell"
 
 CSH相关
 http://www.pythonclub.org/_media/linux/csh/cshell-chinese.pdf
+http://www.pythonclub.org/linux/start
