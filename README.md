@@ -127,3 +127,8 @@ echo "执行第四个Shell"
 ```
 
 上面的脚本假设你有四个分别为`first_script.sh`、`second_script.sh`、`third_script.sh`和`fourth_script.sh`的Shell脚本文件。在脚本中，我们首先启动三个子Shell，然后使用`wait`命令等待它们的完成。最后，当所有三个子Shell都结束后，才执行第四个Shell。
+
+----
+
+CSH相关
+http://www.pythonclub.org/_media/linux/csh/cshell-chinese.pdf
